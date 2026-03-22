@@ -135,3 +135,5 @@ fig1.add_trace(trace_ode)
 fig1.add_trace(trace_data)
 
 fig1.show()
+
+print('THIS IS A TEST')
