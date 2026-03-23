@@ -89,7 +89,8 @@ print()
 ## ODE
 
 D = - slope
-CO2Ex = df1['CO2_ppm'].iloc[0] ##   need to cfm
+CO2Ex = df1['CO2_ppm'].iloc[0]
+
 ##CO2Ex = (intercept - r1)/D
 r1 = intercept - (D * CO2Ex)
 
@@ -135,5 +136,3 @@ fig1.add_trace(trace_ode)
 fig1.add_trace(trace_data)
 
 fig1.show()
-
-print('THIS IS A TEST')
