@@ -14,6 +14,7 @@ message = 'ReadSCD'
 port = 'COM3'
 filename = 'sensor_data.csv'
 
+script_folder = os.path.dirname(os.path.abspath(__file__))
 file_exist = os.path.isfile(filename)
 
 if not file_exist:
@@ -99,7 +100,7 @@ def ode_fun(t , y):
     r2 =  D * (CO2 - CO2Ex)
     dydt = r1 - r2
 
-    return dydt
+    return [dydt]
 
 y0 = [CO2Ex]
 t_start = 0 
